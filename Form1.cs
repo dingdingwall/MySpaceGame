@@ -55,21 +55,29 @@ namespace Space_Game
             if(Asteroid1.Top  > 400)
             {
                 Asteroid1.Top = -100;
-                score = 1;
+
+                score++;
+
+                label3.Text= score.ToString();
+
 
             }
+            
+
             if (Asteroid2.Top > 400)
             {
                 Asteroid2.Top = -100;
-                score =1;
+                
 
             }
             if (Asteroid3.Top > 400)
             {
                 Asteroid3.Top = -100;
-                score = 1;
+                
 
             }
+
+            
 
             if (SpaceShip.Bounds.IntersectsWith(Asteroid1.Bounds) ||
              SpaceShip.Bounds.IntersectsWith(Asteroid2.Bounds) ||
@@ -89,6 +97,16 @@ namespace Space_Game
                 ScoreLabel.Text = "Your total score is :" + score;
 
             }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ScoreLabel2_Click(object sender, EventArgs e)
+        {
 
         }
     }
